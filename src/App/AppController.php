@@ -2,6 +2,7 @@
 
 namespace App;
 
+use PetProject\GroupKTService;
 use Silex\Application;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -9,11 +10,13 @@ class AppController
 {
     private $app;
     private $viewsDir;
+    private $groupKTService;
 
-    public function __construct(Application $app, $viewsDir)
+    public function __construct(Application $app, $viewsDir, GroupKTService $groupKTService)
     {
         $this->app = $app;
         $this->viewsDir = $viewsDir;
+        $this->groupKTService = $groupKTService;
     }
 
     public function hello(Request $request)
@@ -29,7 +32,8 @@ class AppController
             'index.php',
             array_merge(
                 array(
-                    'message' => $msg
+                    'message' => $msg,
+                    'groupKTService' => $this->groupKTService
                 ),
                 $params
             )
