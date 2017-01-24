@@ -59,14 +59,15 @@ class AppController
             return $this->app->redirect($this->app["url_generator"]->generate("hello",
                 array('message' => Message::LOGIN_SUCCEEDED)));
         }
-        
+
         return $this->renderHello(Message::WRONG_CREDENTIALS, $params);
     }
 
     private function login($name, $email, $country)
     {
-        if ($name == $this->config['name'] && $email == $this->config['email'] && $country == $this->config['country'])
+        if ($name == $this->config['name'] && $email == $this->config['email'] && $country == $this->config['country']) {
             return true;
+        }
         return false;
     }
 
@@ -75,7 +76,6 @@ class AppController
         extract($params);
         if ($this->viewsDir) {
             include("{$this->viewsDir}/{$template}");
-
         }
         return '';
     }
