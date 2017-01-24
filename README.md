@@ -14,4 +14,4 @@ Hi, I am PHP backend developer Maksym Prysiazhnyi and this is my pet project =)<
     Countries are pulled through a free REST service.
 
 ## Usage
-Input data and submit form
+First edit config with your credentials. Then input data and submit form
