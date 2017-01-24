@@ -2,3 +2,4 @@
 /vendor/
 /nbproject/
 /app/config/config.php
+/var/logs
