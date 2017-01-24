@@ -3,6 +3,7 @@
 return array(
     'credentials' => array(
         'name' => '',
-        'email' => ''
+        'email' => '',
+        'country' => ''
     )
 );

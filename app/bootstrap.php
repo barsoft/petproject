@@ -13,6 +13,8 @@ $app['paths.logs'] = "{$varDirectory}/logs/";
 $app->register(new Igorw\Silex\ConfigServiceProvider(
     __DIR__ . '/config/config.php'
 ));
+$app->register(new Silex\Provider\ServiceControllerServiceProvider());
+$app->register(new Silex\Provider\UrlGeneratorServiceProvider());
 
 $app['http.timeout'] = 60;
 
@@ -32,12 +34,16 @@ $app['services.groupKT'] = $app->share(function () use ($app) {
 
 $app['app.controller'] = $app->share(function () use ($app) {
     $viewsDir = __DIR__ . "/../src/views/";
-    return new \App\AppController($app, $viewsDir, $app['services.groupKT']);
+    return new \App\AppController($app, $viewsDir, $app['services.groupKT'], $app['credentials']);
 });
 
 $app->get('/', function (Request $request) use ($app) {
     return $app['app.controller']->hello($request);
 })->bind("hello");
+
+$app->post('/helloSubmit', function (Request $request) use ($app) {
+    return $app['app.controller']->helloSubmit($request);
+});
 
 function getApp()
 {

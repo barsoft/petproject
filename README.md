@@ -7,6 +7,11 @@
 3. change configuration in app/config/config.php
 
 ## Description
-Hello, I am PHP backend developer Maksym Prysiazhnyi and this is my pet project =)
+Hi, I am PHP backend developer Maksym Prysiazhnyi and this is my pet project =)</h2>
+    
+    It autheticates user according to the credentials in config. 
+    Nothing special, no db, just a simple string comparation. 
+    Countries are pulled through a free REST service.
 
 ## Usage
+Input data and submit form

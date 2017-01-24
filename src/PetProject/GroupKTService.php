@@ -4,7 +4,6 @@ namespace PetProject;
 
 use Utils\LoggedClient;
 
-
 class GroupKTService
 {
     private $loggedClient;
@@ -21,7 +20,7 @@ class GroupKTService
 
     public function getCountries()
     {
-        $result = $this->getJson("countries");
+        $result = $this->getJson("countries")->RestResponse->result;
         return $result;
     }
 
