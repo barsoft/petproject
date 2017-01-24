@@ -10,7 +10,7 @@
 Hi, I am PHP backend developer Maksym Prysiazhnyi and this is my pet project =)</h2>
     
     It autheticates user according to the credentials in config. 
-    Nothing special, no db, just a simple string comparation. 
+    Nothing special, no DB, just a simple string comparison. 
     Countries are pulled through a free REST service.
 
 ## Usage

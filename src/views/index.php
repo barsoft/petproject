@@ -9,8 +9,8 @@
 <div class="container">
     <h1>PetProject</h1>
     <h2>Hi, I am PHP backend developer Maksym Prysiazhnyi and this is my pet project =)</h2>
-    <h3>It autheticates user according to the credentials in config. Nothing special, no db, just a simple string
-        comparation. Countries are pulled through a free REST service.</h3>
+    <h3>It autheticates user according to the credentials in config. Nothing special, no DB, just a simple string
+        comparison. Countries are pulled through a free REST service.</h3>
     <?php
     if ($message == \PetProject\Message::ALL_FIELDS_SHOULD_BE_FILLED) {
         echo '<div class="alert alert-danger">All fields should be filled</div>';
